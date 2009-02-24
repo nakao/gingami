@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tool name="KazusaAnnotation" id="kazusa_annotation">
+	<description>table browser</description>
+	<command interpreter="python">
+		kazusa_annotation.py $param_file $output
+	</command>
+	<inputs action="http://a.kazusa.or.jp/annotation" check_values="false" method="get" target="_top">
+		<display>go to KazusaAnnotation $GALAXY_URL</display>
+		<param name="GALAXY_URL" type="baseurl" value="/tool_runner/index" />
+	</inputs>
+	<uihints minwidth="800" />
+	<code file="kazusa_annotation.py" />
+	<outputs>
+		<data name="output" format="txt" />
+	</outputs>
+</tool>

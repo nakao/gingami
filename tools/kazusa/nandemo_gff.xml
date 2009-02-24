@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<tool name="Nandemo GFF" id="nandemo_gff">
+	<description>table browser</description>
+	<command>
+		nandemo_gff.rb $query $dsn $output
+	</command>
+	<inputs>
+          <param name='query' type='text'>
+            <label>URI</label>
+          </param>
+          <param name='dsn' type='select'>
+            <label>Data Source Name (DSN)</label>
+            <option value='Synechocystis'>Synechocystis sp. PCC 6803</option>
+            <option value='Lotus'>Lotus japonicas</option>
+          </param>
+	</inputs>
+	<outputs>
+		<data name="output" format="tabular" />
+	</outputs>
+</tool>

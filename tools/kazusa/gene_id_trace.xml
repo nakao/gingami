@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<tool name="Gene ID TraceTable" id="gene_id_trace">
+	<description>, search and convert</description>
+	<command>
+	  gene_id_trace.rb $query $output
+	</command>
+	<inputs>
+	  <param name="query" type="text" />
+	</inputs>
+	<outputs>
+		<data name="output" format="txt" />
+	</outputs>
+</tool>

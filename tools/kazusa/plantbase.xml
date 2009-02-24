@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<tool name="PlantBase" id="plantbase">
+	<description> table browser</description>
+	<command interpreter='ruby'>
+	  microbe_base.rb cyanobase $dsn $output
+	</command>
+	<inputs>
+          <param name="dsn" type="select">
+            <label>Data Source Name</label>
+            <option value="Lotus">Lotus japonicas</option>
+            <option value="Medicago">Medicago</option>
+          </param>
+          <param name="gene_name" type="text">
+            <label>Gene Name/Symbol</label>
+          </param>
+	</inputs>
+	<outputs>
+          <data name="output" format="tabular" />
+	</outputs>
+        <help></help>
+</tool>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<tool name="CyanoBase Genes" id="cyanobase_genes">
+	<description> table browser</description>
+	<command interpreter='ruby'>
+	  microbe_base.rb cyanobase $dsn $output
+	</command>
+	<inputs>
+          <param name="dsn" type="select">
+            <label>Data Source Name</label>
+            <option value="Synechocystis">Synechocystis sp. PCC 6803</option>
+          </param>
+          <param name="gene_name" type="text">
+            <label>Gene Name/Symbol</label>
+          </param>
+	</inputs>
+	<outputs>
+          <data name="output" format="tabular" />
+	</outputs>
+        <help>
+CyanoBase the Genome Database for Cyanobactaria, http://genome.kazusa.or.jp/cyanobase, 
+</help>
+</tool>

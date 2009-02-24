@@ -1,0 +1,42 @@
+<tool id="GendooTable" name="Gendoo Table">
+  <description>Gene/MeSH relation table on PMID</description>
+  <command interpreter="ruby">gendoo_multi.rb $input $column $dsn $out_file</command>
+  <inputs>
+    <param format="tabular" name="input" type="data" label="Query" help="Query missing? See TIP below."/>
+    <param name="column" label="on column" type="data_column" data_ref="input" accept_default="true" />
+    <param name="dsn" type='select'>
+       <label>Data Source Name (DSN)</label>
+       <option value='human'>Homo sapiense</option>
+       <option value='synecho'>Synechocystis sp. PCC 6803</option>
+       <option value='anabaena'>Anabaena sp. PCC 7120</option>
+       <option value='meso'>Mesorhizobium loti MAFF303099</option>
+       <option value='lotus'>Lotus japonicas</option>
+    </param>
+  </inputs>
+  <outputs>
+    <data format="input" name="out_file" metadata_source="input" />
+  </outputs>
+  <tests>
+    <test>
+    </test>
+    <test>
+    </test>
+  </tests>
+  <help>
+
+.. class:: warningmark
+
+Double equal signs, ==, must be used as *"equal to"* (e.g., **c1 == 'chr22'**)
+
+.. class:: infomark
+
+**TIP:** Attempting to apply a filtering condition may throw exceptions if the data type (e.g., string, integer) in every line of the columns being filtered is not app
+ropriate for the condition (e.g., attempting certain numerical calculations on strings).  If an exception is thrown when applying the condition to a line, that line is
+ skipped as invalid for the filter condition.  The number of invalid skipped lines is documented in the resulting history item as a "Condition/data issue".
+
+.. class:: infomark
+
+**TIP:** If your data is not TAB delimited, use *Text Manipulation-&gt;Convert*
+
+  </help>
+</tool>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<tool name="Gendoo" id="gendoo">
+        <description>Gene-to-PMIDs-to-MeSH terms relation table.</description>
+        <command interpreter='ruby'>
+                gendoo_client.rb $query $dsn $output
+        </command>
+        <inputs>
+          <param name='query' type='text'>
+            <label>Gene ID/symbol/ORF Name</label>
+          </param>
+          <param name='dsn' type='select'>
+            <label>Data Source Name (DSN)</label>
+            <option value='human'>Homo sapiense</option>
+            <option value='synecho'>Synechocystis sp. PCC 6803</option>
+            <option value='meso'>Mesorhizobium loti MAFF303099</option>
+            <option value='anabaena'>Anabaena sp. PCC 7120</option>
+            <option value='miyako'>Miyakogusa (Lotus japonicus)</option>
+          </param>
+        </inputs>
+        <outputs>
+          <data name="output" format="tabular" />
+        </outputs>
+        <help>
+Gendoo provides keywords (diseases, drugs and so on) related to genes and diseases of interests. 
+
+http://gendoo.dbcls.jp/pre/
+
+-----
+
+**Gene List**
+
+* http://gendoo.dbcls.jp/pre/data/id2name.human.tab -- Human Gene ID List
+* http://genome.kazusa.or.jp/cyanobase/Synechocystis/genes -- Synechocystis sp. PCC 6803
+* http://genome.kazusa.or.jp/cyanobase/Anabaena/genes -- Anabaena sp. PCC 7120
+* http://genome.kazusa.or.jp/rhizobase/Mesorhizobium/genes -- Mesorhizobium loti MAFF303099
+* http://www.kazusa.or.jp/lotus/ -- Miyakogusa
+
+</help>
+</tool>

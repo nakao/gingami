@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<tool name="Kazusa Genomes" id="gbrowse_kazusa">
+	<description>server</description>
+	<command interpreter="python">gbrowse_datasource.py $output</command>
+	<inputs action="http://g.kazusa.or.jp/cgi-bin/gbrowse" check_values="false" method="get" target="_top"> 
+		<display>go to Kazusa Genomes server $GALAXY_URL</display>
+		<param name="GALAXY_URL" type="baseurl" value="/tool_runner?tool_id=gbrowse_kazusa" />
+	</inputs>
+	<uihints minwidth="800"/>
+	<code file="gbrowse_filter_code.py"/>
+	<outputs>
+		<data name="output" format="txt" />
+	</outputs>
+	<options sanitize="False" refresh="True"/>
+</tool>
+
