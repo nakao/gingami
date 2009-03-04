@@ -4,9 +4,11 @@
       Kazusa and DBCLS tools
     -->
   <section name="Get Kazusa Data" id="kazusa">
-   <tool file="kazusa/gbrowse_kazusa.xml" />
+
    <tool file="kazusa/cyanobase.xml" />
    <tool file="kazusa/rhizobase.xml" />
+   <tool file="kazusa/gbrowse_kazusa.xml" />
+   <tool file="kazusa/biomart.xml" />
 <!--   <tool file="kazusa/plantbase.xml" /> -->
    <tool file="kazusa/kazusa_annotation.xml" />
   </section>

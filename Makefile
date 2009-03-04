@@ -23,6 +23,7 @@ install:
 #	install -c tools/kazusa/gbrowse_kazusa.xml	${groot}/tools/kazusa/
 #	install -c tools/kazusa/kazusa_annotation.py	${groot}/tools/kazusa/
 	install -c tools/kazusa/microbe_base.rb	${groot}/tools/kazusa/
+	install -c tools/kazusa/biomart.xml	${groot}/tools/kazusa/
 
 	#
 	#
