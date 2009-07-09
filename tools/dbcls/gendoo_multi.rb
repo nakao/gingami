@@ -18,9 +18,9 @@ end
 input_file, column, dsn, out_file = ARGV
 input = File.open(input_file).read.split("\n").map {|x| x.split("\t")[column.to_i - 1].strip }
 
-# http://gendoo.dbcls.jp/pre/cgi-bin/gendoo.cgi?geneid=slr1311%0D%0Aslr1312&genename=&taxonomy=synecho&submit=Search
-queries = input.join("%0D%0A")
-url = "http://gendoo.dbcls.jp/pre/cgi-bin/gendoo.cgi?geneid=#{queries}&genename=&taxonomy=#{dsn}&submit=Search"
+# http://gendoo.dbcls.jp/pre/cgi-bin/gendoo.cgi?geneid=slr1311&geneid=slr1312&genename=&taxonomy=synecho&submit=Search
+queries = input.map {|x| "geneid=#{x}" }.join("&")
+url = "http://gendoo.dbcls.jp/pre/cgi-bin/gendoo.cgi?#{queries}&genename=&taxonomy=#{dsn}&submit=Search"
 
 text = open(url).read
 i = 0
